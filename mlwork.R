@@ -10,10 +10,9 @@ df_test = testing(data_split)
 
 cooking = recipe(y~ ., data = df_train) %>%
   step_center(y)%>%
-  step_ordinalscore(all_nominal()) #とくちょーりょーえんじにゃーりんぐ
+  step_ordinalscore(all_nominal()) #特徴量エンジニアリング
 
-
-#あぷらいとぅーでーた
+#データへの適用
 cook_preped = cooking %>%
   prep(df_train)
 
